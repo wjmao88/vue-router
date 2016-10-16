@@ -1,0 +1,571 @@
+<!DOCTYPE HTML>
+<html lang="ja" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>コンポーネント注入 | vue-router 2</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    
+    <link rel="prev" href="../api/router-instance.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="6.6"
+        data-chapter-title="コンポーネント注入"
+        data-filepath="api/component-injections.md"
+        data-basepath=".."
+        data-revision="Sun Oct 16 2016 12:54:04 GMT+0800 (CST)"
+        data-innerlanguage="ja">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        はじめに
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+                
+                    <a target="_blank" href="https:/github.com/vuejs/vue-router/tree/1.0/docs/ja">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        0.7 のドキュメントをお探しですか?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" >
+            
+                
+                    <a target="_blank" href="https:/github.com/vuejs/vue-router/releases">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        リリースノート
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="installation.html">
+            
+                
+                    <a href="../installation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        インストール
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" >
+            
+            <span><b>4.</b> 基本的な使い方</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="essentials/getting-started.html">
+            
+                
+                    <a href="../essentials/getting-started.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        はじめに
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="essentials/dynamic-matching.html">
+            
+                
+                    <a href="../essentials/dynamic-matching.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        動的ルートマッチング
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="essentials/nested-routes.html">
+            
+                
+                    <a href="../essentials/nested-routes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        ネストされたルート
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="essentials/navigation.html">
+            
+                
+                    <a href="../essentials/navigation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        プログラムによるナビゲーション
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="essentials/named-routes.html">
+            
+                
+                    <a href="../essentials/named-routes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        名前付きルート
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="essentials/named-views.html">
+            
+                
+                    <a href="../essentials/named-views.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        名前付きビュー
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="essentials/redirect-and-alias.html">
+            
+                
+                    <a href="../essentials/redirect-and-alias.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        リダイレクトとエイリアス
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="essentials/history-mode.html">
+            
+                
+                    <a href="../essentials/history-mode.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        HTML5 History モード
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" >
+            
+            <span><b>5.</b> 高度な使い方</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="advanced/navigation-guards.html">
+            
+                
+                    <a href="../advanced/navigation-guards.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        ナビゲーションガード
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="advanced/meta.html">
+            
+                
+                    <a href="../advanced/meta.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        ルートメタフィールド
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="advanced/transitions.html">
+            
+                
+                    <a href="../advanced/transitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        トランジション
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="advanced/data-fetching.html">
+            
+                
+                    <a href="../advanced/data-fetching.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        データの取得
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="advanced/scroll-behavior.html">
+            
+                
+                    <a href="../advanced/scroll-behavior.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        スクロールの振る舞い
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="advanced/lazy-loading.html">
+            
+                
+                    <a href="../advanced/lazy-loading.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        遅延ローディング
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" >
+            
+            <span><b>6.</b> API リファレンス</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="api/router-link.html">
+            
+                
+                    <a href="../api/router-link.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        router-link
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="api/router-view.html">
+            
+                
+                    <a href="../api/router-view.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        router-view
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="api/route-object.html">
+            
+                
+                    <a href="../api/route-object.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        ルートオブジェクト
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="api/options.html">
+            
+                
+                    <a href="../api/options.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        ルートコンストラクタオプション
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="api/router-instance.html">
+            
+                
+                    <a href="../api/router-instance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        ルートインスタンス
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.6" data-path="api/component-injections.html">
+            
+                
+                    <a href="../api/component-injections.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        コンポーネント注入
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    で公開 GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >vue-router 2</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x6CE8;&#x5165;">&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x6CE8;&#x5165;</h1>
+<h3 id="&#x6CE8;&#x5165;&#x3055;&#x308C;&#x308B;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;">&#x6CE8;&#x5165;&#x3055;&#x308C;&#x308B;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;</h3>
+<p>&#x30EB;&#x30FC;&#x30BF;&#x30FC;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3092; root &#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306B; <code>router</code> &#x30AA;&#x30D7;&#x30B7;&#x30E7;&#x30F3;&#x3068;&#x3057;&#x3066;&#x6E21;&#x3059;&#x3053;&#x3068;&#x306B;&#x3088;&#x3063;&#x3066;&#x3001;&#x5168;&#x3066;&#x306E;&#x5B50;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x304C;&#x6CE8;&#x5165;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+<ul>
+<li><h4 id="router">$router</h4>
+<p>&#x30EB;&#x30FC;&#x30BF;&#x30FC;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;</p>
+</li>
+<li><h4 id="route">$route</h4>
+<p>&#x73FE;&#x5728;&#x306E;&#x30A2;&#x30AF;&#x30C6;&#x30A3;&#x30D6;&#x306A; <a href="route-object.html">&#x30EB;&#x30FC;&#x30C8;</a> &#x3002;&#x3053;&#x306E;&#x30D7;&#x30ED;&#x30D1;&#x30C6;&#x30A3;&#x306F;&#x8AAD;&#x307F;&#x51FA;&#x3057;&#x306E;&#x307F;&#x53EF;&#x80FD;&#x304B;&#x3064;&#x5909;&#x66F4;&#x4E0D;&#x53EF;&#x3067;&#x3059;&#x304C;&#x3001;watch &#x306F;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;</p>
+</li>
+</ul>
+<h3 id="enabled-options">Enabled Options</h3>
+<ul>
+<li><strong>beforeRouteEnter</strong></li>
+<li><p><strong>beforeRouteLeave</strong></p>
+<p><a href="../advanced/navigation-guards.html#incomponent-guards">&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x5185;&#x30AC;&#x30FC;&#x30C9;</a> &#x3092;&#x3054;&#x53C2;&#x7167;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;</p>
+</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../api/router-instance.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: ルートインスタンス"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-edit-link/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-github/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"edit-link":{"base":"https://github.com/vuejs/vue-router/tree/master/docs","label":"Edit This Page"},"github":{"url":"https://github.com/vuejs/vue-router/"},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

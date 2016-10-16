@@ -1,0 +1,613 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Getting Started | vue-router 2</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../essentials/dynamic-matching.html" />
+    
+    
+    <link rel="prev" href="../installation.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="4.1"
+        data-chapter-title="Getting Started"
+        data-filepath="essentials/getting-started.md"
+        data-basepath=".."
+        data-revision="Sun Oct 16 2016 12:54:04 GMT+0800 (CST)"
+        data-innerlanguage="en">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+                
+                    <a target="_blank" href="https:/github.com/vuejs/vue-router/tree/1.0/docs/en">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Looking for 0.7 Docs?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" >
+            
+                
+                    <a target="_blank" href="https:/github.com/vuejs/vue-router/releases">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Release Notes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="installation.html">
+            
+                
+                    <a href="../installation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Installation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" >
+            
+            <span><b>4.</b> Essentials</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="4.1" data-path="essentials/getting-started.html">
+            
+                
+                    <a href="../essentials/getting-started.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Getting Started
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="essentials/dynamic-matching.html">
+            
+                
+                    <a href="../essentials/dynamic-matching.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Dynamic Route Matching
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="essentials/nested-routes.html">
+            
+                
+                    <a href="../essentials/nested-routes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Nested Routes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="essentials/navigation.html">
+            
+                
+                    <a href="../essentials/navigation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Programmatic Navigation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="essentials/named-routes.html">
+            
+                
+                    <a href="../essentials/named-routes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Named Routes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="essentials/named-views.html">
+            
+                
+                    <a href="../essentials/named-views.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Named Views
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="essentials/redirect-and-alias.html">
+            
+                
+                    <a href="../essentials/redirect-and-alias.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        Redirect and Alias
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="essentials/history-mode.html">
+            
+                
+                    <a href="../essentials/history-mode.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        HTML5 History Mode
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" >
+            
+            <span><b>5.</b> Advanced</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="advanced/navigation-guards.html">
+            
+                
+                    <a href="../advanced/navigation-guards.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Navigation Guards
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="advanced/meta.html">
+            
+                
+                    <a href="../advanced/meta.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Route Meta Fields
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="advanced/transitions.html">
+            
+                
+                    <a href="../advanced/transitions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Transitions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="advanced/data-fetching.html">
+            
+                
+                    <a href="../advanced/data-fetching.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Data Fetching
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="advanced/scroll-behavior.html">
+            
+                
+                    <a href="../advanced/scroll-behavior.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        Scroll Behavior
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="advanced/lazy-loading.html">
+            
+                
+                    <a href="../advanced/lazy-loading.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        Lazy Loading
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" >
+            
+            <span><b>6.</b> API Reference</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="api/router-link.html">
+            
+                
+                    <a href="../api/router-link.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        router-link
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="api/router-view.html">
+            
+                
+                    <a href="../api/router-view.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        router-view
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="api/route-object.html">
+            
+                
+                    <a href="../api/route-object.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        The Route Object
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="api/options.html">
+            
+                
+                    <a href="../api/options.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        Router Constructor Options
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="api/router-instance.html">
+            
+                
+                    <a href="../api/router-instance.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        Router Instance
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="api/component-injections.html">
+            
+                
+                    <a href="../api/component-injections.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        Component Injections
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >vue-router 2</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="getting-started">Getting Started</h1>
+<blockquote>
+<p>We will be using <a href="https://github.com/lukehoban/es6features" target="_blank">ES2015</a> in the code samples in the guide.</p>
+</blockquote>
+<p>Creating a Single-page Application with Vue.js + vue-router is dead simple. With Vue.js, we are already composing our application with components. When adding vue-router to the mix, all we need to do is map our components to the routes and let vue-router know where to render them. Here&apos;s a basic example:</p>
+<h3 id="html">HTML</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;app&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Hello App!<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- use router-link component for navigation. --&gt;</span>
+    <span class="hljs-comment">&lt;!-- specify the link by passing the `to` prop. --&gt;</span>
+    <span class="hljs-comment">&lt;!-- &lt;router-link&gt; will be rendered as an `&lt;a&gt;` tag by default --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">router-link</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">&quot;/foo&quot;</span>&gt;</span>Go to Foo<span class="hljs-tag">&lt;/<span class="hljs-title">router-link</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">router-link</span> <span class="hljs-attribute">to</span>=<span class="hljs-value">&quot;/bar&quot;</span>&gt;</span>Go to Bar<span class="hljs-tag">&lt;/<span class="hljs-title">router-link</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- route outlet --&gt;</span>
+  <span class="hljs-comment">&lt;!-- component matched by the route will render here --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">router-view</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">router-view</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<h3 id="javascript">JavaScript</h3>
+<pre><code class="lang-js"><span class="hljs-comment">// 0. If using a module system, call Vue.use(VueRouter)</span>
+
+<span class="hljs-comment">// 1. Define route components.</span>
+<span class="hljs-comment">// These can be imported from other files</span>
+<span class="hljs-keyword">const</span> Foo = { template: <span class="hljs-string">&apos;&lt;div&gt;foo&lt;/div&gt;&apos;</span> }
+<span class="hljs-keyword">const</span> Bar = { template: <span class="hljs-string">&apos;&lt;div&gt;bar&lt;/div&gt;&apos;</span> }
+
+<span class="hljs-comment">// 2. Define some routes</span>
+<span class="hljs-comment">// Each route should map to a component. The &quot;component&quot; can</span>
+<span class="hljs-comment">// either be an actual component constructor created via</span>
+<span class="hljs-comment">// Vue.extend(), or just a component options object.</span>
+<span class="hljs-comment">// We&apos;ll talk about nested routes later.</span>
+<span class="hljs-keyword">const</span> routes = [
+  { path: <span class="hljs-string">&apos;/foo&apos;</span>, component: Foo },
+  { path: <span class="hljs-string">&apos;/bar&apos;</span>, component: Bar }
+]
+
+<span class="hljs-comment">// 3. Create the router instance and pass the `routes` option</span>
+<span class="hljs-comment">// You can pass in additional options here, but let&apos;s</span>
+<span class="hljs-comment">// keep it simple for now.</span>
+<span class="hljs-keyword">const</span> router = <span class="hljs-keyword">new</span> VueRouter({
+  routes <span class="hljs-comment">// short for routes: routes</span>
+})
+
+<span class="hljs-comment">// 4. Create and mount the root instance.</span>
+<span class="hljs-comment">// Make sure to inject the router with the router option to make the</span>
+<span class="hljs-comment">// whole app router-aware.</span>
+<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> Vue({
+  router
+}).$mount(<span class="hljs-string">&apos;#app&apos;</span>)
+
+<span class="hljs-comment">// Now the app has started!</span>
+</code></pre>
+<p>You can also checkout this example <a href="http://jsfiddle.net/yyx990803/xgrjzsup/" target="_blank">live</a>.</p>
+<p>Notice that a <code>&lt;router-link&gt;</code> automatically gets the <code>.router-link-active</code> class when its target route is matched. You can learn more about it in its <a href="../api/router-link.html">API reference</a>.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../installation.html" class="navigation navigation-prev " aria-label="Previous page: Installation"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../essentials/dynamic-matching.html" class="navigation navigation-next " aria-label="Next page: Dynamic Route Matching"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-edit-link/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-github/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"edit-link":{"base":"https://github.com/vuejs/vue-router/tree/master/docs","label":"Edit This Page"},"github":{"url":"https://github.com/vuejs/vue-router/"},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
