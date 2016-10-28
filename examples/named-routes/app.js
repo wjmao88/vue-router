@@ -6,6 +6,7 @@ Vue.use(VueRouter)
 const Home = { template: '<div>This is Home</div>' }
 const Foo = { template: '<div>This is Foo</div>' }
 const Bar = { template: '<div>This is Bar {{ $route.params.id }}</div>' }
+const Baz = { template: '<div>This is Baz {{ $route.params.id }}</div>' }
 
 const router = new VueRouter({
   mode: 'history',
@@ -13,7 +14,8 @@ const router = new VueRouter({
   routes: [
     { path: '/', name: 'home', component: Home },
     { path: '/foo', name: 'foo', component: Foo },
-    { path: '/bar/:id', name: 'bar', component: Bar }
+    { path: '/bar/:id', name: 'bar', component: Bar },
+    { path: '/bar/:id/baz', name: 'baz', component: Baz }
   ]
 })
 
@@ -27,6 +29,7 @@ new Vue({
         <li><router-link :to="{ name: 'home' }">home</router-link></li>
         <li><router-link :to="{ name: 'foo' }">foo</router-link></li>
         <li><router-link :to="{ name: 'bar', params: { id: 123 }}">bar</router-link></li>
+        <li><router-link :to="{ name: 'baz' }">bar</router-link></li>
       </ul>
       <router-view class="view"></router-view>
     </div>

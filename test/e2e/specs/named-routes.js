@@ -8,6 +8,7 @@ module.exports = {
       .assert.attributeContains('li:nth-child(1) a', 'href', '/named-routes/')
       .assert.attributeContains('li:nth-child(2) a', 'href', '/named-routes/foo')
       .assert.attributeContains('li:nth-child(3) a', 'href', '/named-routes/bar')
+      .assert.attributeContains('li:nth-child(4) a', 'href', '/named-routes/baz')
       .assert.containsText('p', 'Current route name: home')
       .assert.containsText('.view', 'Home')
 
@@ -20,6 +21,11 @@ module.exports = {
       .assert.urlEquals('http://localhost:8080/named-routes/bar/123')
       .assert.containsText('p', 'Current route name: bar')
       .assert.containsText('.view', 'Bar 123')
+
+      .click('li:nth-child(4) a')
+      .assert.urlEquals('http://localhost:8080/named-routes/bar/123/baz')
+      .assert.containsText('p', 'Current route name: baz')
+      .assert.containsText('.view', 'Baz 123')
 
       .click('li:nth-child(1) a')
       .assert.urlEquals('http://localhost:8080/named-routes/')
