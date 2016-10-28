@@ -18,6 +18,7 @@ export function normalizeLocation (
   const path = parsedPath.path
     ? resolvePath(parsedPath.path, basePath, append)
     : (current && current.path) || '/'
+  const params = Object.assign({}, (current ? current.params : {}), next.params)
   const query = resolveQuery(parsedPath.query, next.query)
   let hash = next.hash || parsedPath.hash
   if (hash && hash.charAt(0) !== '#') {
@@ -27,6 +28,7 @@ export function normalizeLocation (
   return {
     _normalized: true,
     path,
+    params,
     query,
     hash
   }
